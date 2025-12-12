@@ -76,11 +76,11 @@ pub fn main() !void {
     var y: u8 = 0b1011;
 
     // Now we swap the values of the two variables by doing xor on them
-    x ^= y;
-    y ^= x;
+    x ^= y;  // x becomes 0b0110 - Denotes positions of inequality
+    y ^= x;  // flip on positions of inequality - y becomes 0b1101
 
     // What must be written here?
-    ???;
+    x ^= y;  // flip x back on positions of inequality - x becomes 0b1011
 
     print("x = {b}; y = {b}\n", .{ x, y });
 }
